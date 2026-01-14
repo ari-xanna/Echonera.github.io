@@ -15,6 +15,21 @@ body {
     background-attachment: fixed;
     color: #fff;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
 }
 
 /* Header & Navigation */
@@ -255,6 +270,11 @@ nav ul li a:hover {
     text-align: center;
     position: relative;
     z-index: 1;
+    padding: 40px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 40px rgba(255, 23, 68, 0.3);
 }
 
 .about h2 {
@@ -281,7 +301,15 @@ nav ul li a:hover {
 
 /* Shop Section */
 .shop {
-    background: linear-gradient(135deg, rgba(255, 23, 68, 0.6) 0%, rgba(255, 179, 217, 0.6) 100%);
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 23, 68, 0.1) 0px,
+            rgba(255, 23, 68, 0.1) 10px,
+            transparent 10px,
+            transparent 20px
+        ),
+        linear-gradient(135deg, rgba(255, 23, 68, 0.6) 0%, rgba(255, 179, 217, 0.6) 100%);
     backdrop-filter: blur(10px);
     padding: 120px 40px;
     min-height: 100vh;
