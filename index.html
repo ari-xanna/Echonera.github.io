@@ -81,6 +81,15 @@
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
+    "buttonDestination": "modal",
+    "contents": {
+      "img": true,
+      "imgWithCarousel": false,
+      "button": true,
+      "buttonWithQuantity": false,
+      "title": true,
+      "price": true
+    },
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
@@ -94,7 +103,8 @@
           "position": "absolute",
           "left": "0",
           "right": "0",
-          "top": "0"
+          "top": "0",
+          "cursor": "pointer"
         },
         "imgWrapper": {
           "padding-top": "calc(75% + 15px)",
@@ -113,7 +123,7 @@
       }
     },
     "text": {
-      "button": "Add to cart"
+      "button": "View Details"
     }
   },
   "productSet": {
