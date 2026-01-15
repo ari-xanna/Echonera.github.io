@@ -135,7 +135,6 @@ nav ul li a:hover {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 64, 129, 0.2) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
 }
 
 .hero::after {
@@ -146,11 +145,6 @@ nav ul li a:hover {
     right: 0;
     height: 150px;
     background: linear-gradient(to bottom, transparent, rgba(255, 23, 68, 0.3));
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 .hero-content {
@@ -184,18 +178,6 @@ nav ul li a:hover {
     font-weight: 700;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
                  0 0 40px rgba(255, 23, 68, 0.7);
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
-                     0 0 40px rgba(255, 23, 68, 0.7);
-    }
-    to {
-        text-shadow: 0 0 30px rgba(255, 255, 255, 1),
-                     0 0 60px rgba(255, 23, 68, 1);
-    }
 }
 
 .cta-button {
@@ -273,7 +255,8 @@ nav ul li a:hover {
     padding: 40px;
     border: 2px dashed rgba(255, 255, 255, 0.4);
     border-radius: 15px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 40px rgba(255, 23, 68, 0.3);
 }
 
@@ -334,6 +317,10 @@ nav ul li a:hover {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .shop h2 {
@@ -356,8 +343,8 @@ nav ul li a:hover {
 }
 
 .shopify-buy__product {
-    background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(15px) !important;
     border: 2px solid rgba(255, 255, 255, 0.4) !important;
     border-radius: 20px !important;
     box-shadow: 0 8px 32px rgba(255, 23, 68, 0.3),
@@ -379,18 +366,26 @@ nav ul li a:hover {
     overflow: hidden !important;
 }
 
-.shopify-buy__product__title {
+.shopify-buy__product__title,
+.shopify-buy__product__title * {
     color: #fff !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+h1.shopify-buy__product__title,
+.shopify-buy-frame .shopify-buy__product__title {
+    color: #fff !important;
 }
 
 .shopify-buy__product__price {
     color: #fff !important;
     font-weight: 900 !important;
-    text-shadow: 0 0 10px rgba(255, 23, 68, 0.9) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                 0 0 10px rgba(255, 23, 68, 0.6) !important;
     font-size: 1.3rem !important;
 }
 
@@ -499,4 +494,163 @@ footer a:hover {
         padding: 15px 35px;
         font-size: 1rem;
     }
+}
+/* Y2K Maximalist Decoration Layers */
+.hero::before,
+.about::before,
+.shop::before {
+    background-image: 
+        url('../Assets/Gothic-rose.png'),
+        url('../Assets/Pink-Glitter-Star.png'),
+        url('../Assets/Y2K-butterfly.png'),
+        url('../Assets/Heart-with-wings.png'),
+        url('../Assets/Crown.png'),
+        url('../Assets/Broken-heart-graphic.png'),
+        url('../Assets/Glittery-heart.png'),
+        url('../Assets/Small-butterfly-cluster.png'),
+        url('../Assets/Stylized-rose.png'),
+        url('../Assets/Cluster-of-small-stars.png');
+    background-size: 
+        220px 220px,
+        180px 180px,
+        200px 200px,
+        190px 190px,
+        170px 170px,
+        210px 210px,
+        185px 185px,
+        175px 175px,
+        195px 195px,
+        160px 160px;
+    background-position:
+        0 0,
+        30px 40px,
+        60px 20px,
+        90px 70px,
+        15px 55px,
+        45px 85px,
+        75px 15px,
+        105px 50px,
+        20px 80px,
+        50px 10px;
+    background-repeat: repeat;
+    opacity: 0.7;
+}
+
+.hero {
+    background-image:
+        url('../Assets/Chain-link-border.png'),
+        url('../Assets/Starburst-explosion.png'),
+        url('../Assets/Large-shooting-star.png'),
+        url('../Assets/Glitter-Swirl.png'),
+        url('../Assets/Rose-with-sparkles.png'),
+        url('../Assets/Lightningbolt-with-sparkles.png'),
+        url('../Assets/Checkerd-corner.png'),
+        url('../Assets/Cross-safty-pins.png'),
+        url('../Assets/Outlined-heart.png'),
+        url('../Assets/Outlined-star-burst .png');
+    background-size:
+        210px 210px,
+        230px 230px,
+        200px 200px,
+        180px 180px,
+        195px 195px,
+        205px 205px,
+        190px 190px,
+        170px 170px,
+        185px 185px,
+        215px 215px;
+    background-position:
+        25px 35px,
+        80px 10px,
+        10px 65px,
+        55px 45px,
+        95px 80px,
+        40px 20px,
+        70px 60px,
+        5px 90px,
+        85px 25px,
+        35px 75px;
+    background-repeat: repeat;
+}
+
+.about {
+    background-image:
+        url('../Assets/Gothic-mozei-butterfly.png'),
+        url('../Assets/Leopard-print-circle.png'),
+        url('../Assets/Y2K-style-rose.png'),
+        url('../Assets/Ribbon-Bow.png'),
+        url('../Assets/Small-decorative-rose.png'),
+        url('../Assets/Pink-Glitter-Star.png'),
+        url('../Assets/Y2K-butterfly.png'),
+        url('../Assets/Gothic-rose.png'),
+        url('../Assets/Heart-with-wings.png'),
+        url('../Assets/Crown.png');
+    background-size:
+        205px 205px,
+        225px 225px,
+        190px 190px,
+        175px 175px,
+        165px 165px,
+        195px 195px,
+        210px 210px,
+        200px 200px,
+        185px 185px,
+        180px 180px;
+    background-position:
+        15px 25px,
+        60px 70px,
+        90px 15px,
+        30px 85px,
+        75px 40px,
+        45px 55px,
+        5px 80px,
+        100px 30px,
+        50px 5px,
+        85px 60px;
+    background-repeat: repeat;
+}
+
+.shop {
+    background-image:
+        url('../Assets/Glittery-heart.png'),
+        url('../Assets/Starburst-explosion.png'),
+        url('../Assets/Cluster-of-small-stars.png'),
+        url('../Assets/Broken-heart-graphic.png'),
+        url('../Assets/Outlined-star-burst .png'),
+        url('../Assets/Rose-with-sparkles.png'),
+        url('../Assets/Small-butterfly-cluster.png'),
+        url('../Assets/Lightningbolt-with-sparkles.png'),
+        url('../Assets/Checkerd-corner.png'),
+        url('../Assets/Chain-link-border.png');
+    background-size:
+        215px 215px,
+        200px 200px,
+        170px 170px,
+        220px 220px,
+        195px 195px,
+        185px 185px,
+        175px 175px,
+        210px 210px,
+        190px 190px,
+        205px 205px;
+    background-position:
+        20px 50px,
+        65px 20px,
+        95px 75px,
+        35px 10px,
+        80px 55px,
+        10px 85px,
+        50px 30px,
+        75px 5px,
+        40px 65px,
+        5px 40px;
+    background-repeat: repeat;
+}
+
+/* Keep content above decorations */
+.hero-content,
+.about .container,
+.shop .container {
+    position: relative;
+    z-index: 100;
 }
